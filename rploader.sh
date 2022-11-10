@@ -11,15 +11,15 @@ rploaderver="0.9.2.9"
 build="main"
 redpillmake="prod"
 
-rploaderfile="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/rploader.sh"
-rploaderrepo="https://github.com/Mcxunyun666/tinycore-redpill/raw/$build/"
+rploaderfile="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/tinycore-redpill-cn/$build/rploader.sh"
+rploaderrepo="https://github.com/Mcxunyun666/tinycore-redpill-cn/raw/$build/"
 
 redpillextension="https://github.com/Mcxunyun666/rp-ext/raw/main/redpill${redpillmake}/rpext-index.json"
 modextention="https://github.com/Mcxunyun666/rp-ext/raw/main/rpext-index.json"
-modalias4="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/modules.alias.4.json.gz"
-modalias3="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/modules.alias.3.json.gz"
-dtcbin="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/tools/dtc"
-dtsfiles="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build"
+modalias4="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/tinycore-redpill-cn/$build/modules.alias.4.json.gz"
+modalias3="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/tinycore-redpill-cn/$build/modules.alias.3.json.gz"
+dtcbin="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/tinycore-redpill-cn/$build/tools/dtc"
+dtsfiles="https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/tinycore-redpill-cn/$build"
 timezone="UTC"
 ntpserver="pool.ntp.org"
 userconfigfile="/home/tc/user_config.json"
@@ -251,7 +251,7 @@ function syntaxcheck() {
         ext)
             echo "Syntax error, You have to specify one of the existing platforms, the action and the extension URL"
             echo "example:"
-            echo "rploader.sh ext apollolake-7.0.1-42218 add https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/rp-ext/master/e1000/rpext-index.json"
+            echo "rploader.sh ext apollolake-7.0.1-42218 add https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/rp-ext/master/e1000/rpext-index.json"
             echo "or for auto detect use"
             echo "rploader.sh ext apollolake-7.0.1-42218 auto"
             ;;
@@ -937,7 +937,7 @@ function postupdatev1() {
 
         echo "bspatch does not exist, bringing over from repo"
 
-        curl --insecure --location "https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/tools/bspatch" -O
+        curl --insecure --location "https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/tinycore-redpill-cn/$build/tools/bspatch" -O
 
         chmod 777 bspatch
         sudo mv bspatch /usr/local/bin/
@@ -1164,7 +1164,7 @@ function downloadextractorv2() {
     sudo rm -rf ../oldpat.tar.gz
     sudo rm -rf hda1.tgz
 
-    curl --insecure --silent --location https://github.com/pocopico/tinycore-redpill/blob/main/tools/xxd?raw=true --output xxd
+    curl --insecure --silent --location https://github.com/Mcxunyun666/tinycore-redpill-cn/blob/main/tools/xxd?raw=true --output xxd
 
     chmod +x xxd
 
@@ -2397,7 +2397,7 @@ mountshare, version, monitor, bringfriend, downloadupgradepat, help
   Valid Options:  add/force_add/info/remove/update/cleanup/auto . Options after platform 
   
   Example: 
-  rploader.sh ext apollolake-7.0.1-42218 add https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/rp-ext/master/e1000/rpext-index.json
+  rploader.sh ext apollolake-7.0.1-42218 add https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/rp-ext/master/e1000/rpext-index.json
   or for auto detect use 
   rploader.sh ext apollolake-7.0.1-42218 auto 
   
@@ -2972,7 +2972,7 @@ function getvars() {
 
         echo "bspatch does not exist, bringing over from repo"
 
-        curl --insecure --location "https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/pocopico/tinycore-redpill/$build/tools/bspatch" -O
+        curl --insecure --location "https://git.xiaocloud.eu.org/https://raw.githubusercontent.com/Mcxunyun666/tinycore-redpill-cn/$build/tools/bspatch" -O
 
         chmod 777 bspatch
         sudo mv bspatch /usr/local/bin/
@@ -3322,7 +3322,7 @@ if [ -z "$GATEWAY_INTERFACE" ]; then
         if [ -f interactive.sh ]; then
             . ./interactive.sh
         else
-            curl --insecure --location --progress-bar "https://github.com/pocopico/tinycore-redpill/raw/$build/interactive.sh" --output interactive.sh
+            curl --insecure --location --progress-bar "https://github.com/Mcxunyun666/tinycore-redpill-cn/raw/$build/interactive.sh" --output interactive.sh
             . ./interactive.sh
             exit 99
         fi
